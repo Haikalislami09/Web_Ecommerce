@@ -1,0 +1,8 @@
+*{
+    margin: 0;
+    width: 100%;
+}
+nav {
+    justify-content: center;
+    text-align: center;
+}

@@ -1,0 +1,95 @@
+body{
+    background-color: black;
+}
+li a, button{
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 4%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: white;
+}
+.nav-links{
+    list-style: none;
+}
+.nav-links li{
+    display: inline-block;
+    padding: 0 10px;
+}
+.nav-links li a{
+    transition: all 0.3s ease 0s;
+}
+.nav-links li a:hover{
+    color: aqua;
+}
+.container {
+    max-width: 800px;
+    margin-top: 50px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+.gambar img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+}
+.gambar h4{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+.data-diri {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+.data-diri a{
+    text-decoration: none;
+}
+.data-diri h4{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+.data-diri .form-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.data-diri .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.data-diri .form-control[readonly] {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+}
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #343a40;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #495057;
+}
