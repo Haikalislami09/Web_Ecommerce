@@ -274,6 +274,7 @@ if (empty($_SESSION['username']) or empty($_SESSION['password'])) {
                         <span class="product-catagory"><?= $row['kategori'] ?></span>
                         <h4><a href="#cardDesc" data-bs-toggle="modal" data-bs-target="#cardDesc<?= $row['id_barang'] ?>"><?= $row['nama_barang'] ?></a></h4>
                         <p><?= batasDeskripsi($row['descrip'], 5) ?>...</p>
+                        <p>stok : <?= $row['stok']?></p>
                         <div class="product-bottom-details">
                             <div class="product-price">Rp.<?= number_format($row['harga'], 0, ',', '.'); ?></div>
                             <div class="product-links">

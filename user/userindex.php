@@ -88,7 +88,7 @@
                 <h3>its impossible to give up</h3>
                 <h1>Just do it</h1>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis nulla saepe iusto, delectus exercitationem consequuntur esse fuga laudantium natus suscipit beatae alias soluta quaerat vero minima libero consequatur voluptates. Odio.</p>
-                <a href="" class="btn-buy">Just buy it</a>
+                <a href="#product-container" class="btn-buy">Just buy it</a>
             </div>
             <div class="img-shoes">
                 <img src="../gambar/nikeshoes.png" alt="">
@@ -245,7 +245,7 @@
 
 
     </section>
-    <section class="product-container">
+    <section class="product-container" id="product-container">
         <?php 
             $searching = isset($_POST['search']) ? $_POST['search'] : '';
 
@@ -314,8 +314,10 @@
                         </div>
                         <div class="modal-body">
                             <form action="pesanan.php?id=<?= $id_user ?>&id_barang=<?= $row['id_barang'] ?>" method="post">
-                                <label for="name" class="form-label">Masukkan jumlah barang</label>
+                                <label for="name" class="form-label">Masukkan jumlah barang</label> <br>
+                                <label for="name" class="form-label">stok : <?=$row['stok']?></label>
                                 <input type="number" class="form-control" name="jumlah" value="1" min="1" max="<?= $row['stok'] ?>">
+                                <label for="name" class="form-label">*Kamu tidak bisa memasukkan lebih dari jumlah stok</label>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

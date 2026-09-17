@@ -271,11 +271,29 @@ button{
 }
 .product-container a {
     text-decoration: none;
-    display: flex;
+    display: block;
+    width: 100%;
+}
+@media (max-width: 768px) {
+    .all-product {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .product-tumb {
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .all-product {
+        grid-template-columns: 1fr;
+    }
 }
 .all-product {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 20px;
     padding: 20px;
 }
@@ -287,6 +305,7 @@ button{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow: hidden;
     border-radius: 20px;
 }
 .badge {
@@ -306,11 +325,13 @@ button{
     justify-content: center;
     height: 300px;
     padding: 50px;
+    width: 100%;
     background: #f0f0f0;
 }
 .product-tumb img {
     max-width: 100%;
     max-height: 100%;
+    object-fit: contain;
 }
 .product-details {
     padding: 30px;
@@ -342,13 +363,15 @@ button{
     color: #999;
 }
 .product-bottom-details {
-    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border-top: 1px solid #eee;
     padding-top: 20px;
 }
 .product-bottom-details div {
-    float: left;
-    width: 50%;
+    float: none;
+    width: auto;
 }
 .product-price {
     font-size: 18px;
